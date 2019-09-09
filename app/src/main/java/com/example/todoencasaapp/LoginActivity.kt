@@ -51,5 +51,8 @@ class LoginActivity : AppCompatActivity() {
              correo = data!!.extras.getString("correo")
              contraseña = data!!.extras.getString("contraseña")
         }
+        if(requestCode == 5678 && resultCode == Activity.RESULT_CANCELED){
+            finish()
+        }
     }
 }

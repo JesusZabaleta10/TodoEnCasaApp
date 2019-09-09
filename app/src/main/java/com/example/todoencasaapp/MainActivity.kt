@@ -38,4 +38,12 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var intent = Intent(this, LoginActivity::class.java)
+        Toast.makeText(this, "Gracias por usar nuestra app", Toast.LENGTH_SHORT).show()
+        setResult(Activity.RESULT_CANCELED,intent)
+        finish()
+    }
 }
